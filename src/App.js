@@ -1,8 +1,8 @@
-import React from 'react';
+
+import React, { Component } from 'react'
 
 import './App.css';
 import Navbar from './components/Navbar';
-import { Component } from 'react'
 import News from './components/News';
 import LoadingBar from 'react-top-loading-bar'
 import {
