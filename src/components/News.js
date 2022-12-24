@@ -9,7 +9,6 @@ const News = (props) => {
     const [loading, setLoading] = useState(true)
     const [page, setPage] = useState(1)
     const [totalResults, setTotalResults] = useState(0)
-    // document.title = `Daily Dose- ${props.category}`
 
 
 
@@ -17,7 +16,7 @@ const News = (props) => {
         props.setProgress(0)
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`
         setLoading(true)
-        console.log(url)
+        // console.log(url)
         let data = await fetch(url);
         props.setProgress(30)
 
@@ -31,7 +30,9 @@ const News = (props) => {
 
     }
     useEffect(() => {
+        document.title = `Daily Dose- ${props.category}`
         updateNews();
+
     }, [])
 
 
@@ -40,18 +41,18 @@ const News = (props) => {
         setPage(page + 1)
 
 
-        const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`
+        const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page+1}&pageSize=${props.pageSize}`
 
         let data = await fetch(url);
         let parsedData = await data.json()
-        console.log(parsedData);
+        // console.log(parsedData);
         setArticles(articles.concat(parsedData.articles))
         setTotalResults(parsedData.totalResults)
 
     };
     return (
         <>
-            <h1 className="text-center my-4">Daily Dose - Top {props.category} Headlines</h1>
+            <h1 className="text-center" style={{marginTop:'80px'}}>Daily Dose - Top {props.category} Headlines</h1>
             {loading && <Spinner />}
             <InfiniteScroll
                 dataLength={articles.length}
