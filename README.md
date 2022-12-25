@@ -1,6 +1,6 @@
 # Daily Dose News-app :dizzy:
 <br>
-<img src="https://github.com/VenusTokyo/News-App/blob/main/public/Capture.PNG">
+<img src="https://github.com/VenusTokyo/News-App/blob/main/public/Capture.PNG" height="300px" width="500px">
 
 A webapp that shows latest news of India. :sparkles:
 You can choose from variety of categories like sports, buisness, science etc. 
