@@ -1,9 +1,12 @@
 # Daily Dose News-app :dizzy:
 <br>
+![alt text](https://github.com/VenusTokyo/News-App/blob/main/public/Capture.PNG?raw=true)
+
 A webapp that shows latest news of India. :sparkles:
 You can choose from variety of categories like sports, buisness, science etc. 
 
 News from NewsApi. 
+
 Note: News api is a free to use api for developers, and can only be run on development server(localhost) for free.  
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
